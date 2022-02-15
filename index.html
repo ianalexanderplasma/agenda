@@ -10,8 +10,7 @@
 
         <div class="min-w-2xl w-full">
             <h1 class="max-w-sm m-auto flex justify-center text-xl text-primary-900 font-medium text-center my-4 focus:outline-none hover:bg-gray-200 rounded-lg"
-                role="textbox" contenteditable>Meeting
-                title</h1>
+                role="textbox" contenteditable>Meeting Title</h1>
             <ol role="list"
                 class="border border-gray-300 rounded-md divide-y divide-gray-300 md:flex md:divide-y-0 bg-white shadow-sm">
                 <li id="0" class="group relative md:flex-1 md:flex transition duration-500 ease-in-out">
@@ -284,31 +283,40 @@
         </div>
 
 
-        <div class="py-12">
+        <div class="my-10">
             <label class="text-base font-medium text-gray-900">Color scheme</label>
             <fieldset class="mt-4" onchange="setTheme()">
                 <div class="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10">
                     <div class="flex items-center">
                         <input id="ll-pink" name="color-scheme" type="radio" checked
-                            class="focus:ring-gray-500 h-4 w-4 border-gray-300 text-pink-900">
+                            class="focus:ring-gray-500 h-4 w-4 border-gray-300 text-pink-900 cursor-pointer">
                         <label for="email" class="ml-3 block text-sm font-medium text-gray-700">Pink</label>
                     </div>
 
                     <div class="flex items-center">
                         <input id="ll-turquoise" name="color-scheme" type="radio"
-                            class="focus:ring-gray-500 h-4 w-4 text-turquoise-900 border-gray-300">
+                            class="focus:ring-gray-500 h-4 w-4 text-turquoise-900 border-gray-300 cursor-pointer">
                         <label for="sms" class="ml-3 block text-sm font-medium text-gray-700">Turquoise</label>
                     </div>
 
                     <div class="flex items-center">
                         <input id="ll-yellow" name="color-scheme" type="radio"
-                            class="focus:ring-gray-500 h-4 w-4 text-yellow-900 border-gray-300">
+                            class="focus:ring-gray-500 h-4 w-4 text-yellow-900 border-gray-300 cursor-pointer">
                         <label for="push" class="ml-3 block text-sm font-medium text-gray-700">Yellow
                         </label>
                     </div>
                 </div>
             </fieldset>
         </div>
+        <div class="mb-10">
+            <h3 class="text-base font-medium text-gray-900">How to screenshot the graphic</h3>
+            <p class="mt-4 text-sm text-gray-900"><span class="bg-gray-200 py-1 px-2 rounded-md font-medium">Command
+                    ⌘</span> +
+                <span class="bg-gray-200 py-1 px-2  rounded-md font-medium">Shift</span> +
+                <span class="bg-gray-200 py-1 px-2 rounded-md font-medium">4</span>
+            </p>
+        </div>
+
 
 
     </div>
