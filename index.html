@@ -11,345 +11,354 @@
             <span
                 class="editable max-w-sm m-auto flex justify-center text-xl text-primary-900 font-medium text-center my-4 focus:outline-none hover:bg-gray-200 rounded-lg"
                 role="textbox" contenteditable="true">Meeting Title</span>
-            <ol role="list"
-                class="mb-20 border border-gray-300 rounded-md divide-y divide-gray-300 md:flex md:divide-y-0 shadow-sm overflow-hidden">
-                <li id="0" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
-                            <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
+            <div class="flex items-center mb-20 gap-4">
+                <ol
+                    id="ol"
+                    role="list"
+                    class="border border-gray-300 rounded-md divide-y divide-gray-300 grow md:flex md:divide-y-0 shadow-sm overflow-hidden">
+                    <li id="0" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
                                 <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
-
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('0')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
-
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-                <li id="1" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
-                            <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
-                                <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
-
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('1')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
-
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-                <li id="2" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
-                            <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
-                                <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
 
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('2')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
-
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-                <li id="3" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
+                            </span>
                             <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('0')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
+
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li id="1" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
                                 <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
+                                </span>
 
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('3')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
-
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-                <li id="4" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
+                            </span>
                             <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('1')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
+
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li id="2" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
                                 <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
+                                </span>
 
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('4')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
-
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-                <li id="5" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
+                            </span>
                             <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('2')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
+
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li id="3" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
                                 <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
+                                </span>
 
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('5')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
-
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-                <li id="6" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
-                    <div class="flex items-center">
-                        <span class="p-4 flex items-center">
+                            </span>
                             <span
-                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
-                                <input
-                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
-                                    type="text">
-                            </span>
-                            <span class="circle-check hidden">
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('3')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
+
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li id="4" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
                                 <span
-                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
                                 </span>
-                            </span>
-                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
-                                <span
-                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Item</span>
-                                <span
-                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
-                                    role="textbox" contenteditable="true">Description</span>
-                            </span>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
+                                </span>
 
-                        </span>
-                        <span
-                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
-                            onclick="removeItem('6')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg></span>
+                            </span>
+                            <span
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('4')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
 
-                    </div>
-                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
-                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
-                            preserveAspectRatio="none">
-                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </li>
-            </ol>
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li id="5" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
+                                <span
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
+                                </span>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
+                                </span>
+
+                            </span>
+                            <span
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('5')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
+
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li id="6" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                        <div class="flex items-center">
+                            <span class="p-4 flex items-center">
+                                <span
+                                    class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                    <input
+                                        class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                        type="text">
+                                </span>
+                                <span class="circle-check hidden">
+                                    <span
+                                        class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                    <span
+                                        class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Item</span>
+                                    <span
+                                        class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                        role="textbox" contenteditable="true">Description</span>
+                                </span>
+
+                            </span>
+                            <span
+                                class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                                onclick="removeItem('6')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg></span>
+
+                        </div>
+                        <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                            <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                                preserveAspectRatio="none">
+                                <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </li>
+                </ol>
+                <div>
+                    <svg onclick="addItem()" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
         </div>
 
         <div id="footer" class="md:fixed left-0 bottom-0 w-full p-8 border-t-2 bg-gray-100">
@@ -583,6 +592,11 @@
     --charcoal: #414042; */
 </style>
 <script>
+    function addItem() {
+        var el = document.getElementById('ol');
+        const length = document.querySelectorAll("li").length;
+        el.innerHTML += getItem(length);
+    }
 
     function removeItem(id) {
         var el = document.getElementById(id);
@@ -624,7 +638,56 @@
         el.classList.toggle("complete");
     }
 
+    function getItem(id) {
+        return `<li id="` + id +  `" class="group relative md:flex-1 md:flex bg-white" onclick="toggleComplete(this)">
+                    <div class="flex items-center">
+                        <span class="p-4 flex items-center">
+                            <span
+                                class="circle-input flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 rounded-full">
+                                <input
+                                    class="editable w-10 h-10 text-primary-900 text-sm font-medium p-0 text-center border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-full bg-transparent"
+                                    type="text">
+                            </span>
+                            <span class="circle-check hidden">
+                                <span
+                                    class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary-300 text-primary-900 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="mt-0.5 ml-1 min-w-0 flex flex-col">
+                                <span
+                                    class="editable px-1 text-xs font-semibold text-primary-900 tracking-wide uppercase border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                    role="textbox" contenteditable="true">Item</span>
+                                <span
+                                    class="editable px-1 text-sm text-gray-700 border-0 hover:bg-gray-200 focus:outline-none focus:ring-0 focus:ring-white focus:bg-gray-200 focus:text-primary-900 rounded-lg"
+                                    role="textbox" contenteditable="true">Description</span>
+                            </span>
 
+                        </span>
+                        <span
+                            class="delete hidden absolute group-hover:flex top-0 right-0 m-1 sm:mr-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                            onclick="removeItem('` + id + `')"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg></span>
+
+                    </div>
+                    <div class="arrow hidden md:block absolute top-0 right-0 h-full w-5" aria-hidden="true">
+                        <svg class="h-full w-full text-gray-300" viewBox="0 0 22 80" fill="none"
+                            preserveAspectRatio="none">
+                            <path d="M0 -2L20 40L0 82" vector-effect="non-scaling-stroke" stroke="currentcolor"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </li>`;
+    }
 
 
 </script>
